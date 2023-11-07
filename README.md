@@ -10,8 +10,6 @@ conda env create -f cupy.yml
 **Run-Time Application:** A sample application can be run and visualized in Rviz as follows:
 
 ```
-catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
-catkin_make -DPYTHON_EXECUTABLE=/home/minghan/anaconda3/envs/cupy/bin/python
 conda activate cupy
 source /opt/ros/noetic/setup.bash
 catkin_make -DPYTHON_EXECUTABLE=/home/minghan/mambaforge/envs/cupy/bin/python
@@ -20,10 +18,25 @@ roslaunch plane_seg_ros view_plane_seg.launch
 ```
 
 **Test program:** reads example point clouds (PCDs), processes them and executes the fitting algorithm:
+In the first terminal:
 
 ```
 conda activate cupy
 source devel/setup.bash 
-roslaunch plane_seg_ros test.launch
+roslaunch plane_seg_ros cw_test2.launch
+```
+In the second terminal:
+
+```
+conda activate cupy
+source devel/setup.bash 
+roslaunch plane_seg_ros cw_test3.launch
+```
+In the third terminal:
+
+```
+conda activate cupy
+source devel/setup.bash 
+roslaunch plane_seg_ros cw_test1.launch
 ```
 
