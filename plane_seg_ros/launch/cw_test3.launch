@@ -1,0 +1,9 @@
+<launch>
+
+  <node name="plane_seg_n2" pkg="plane_seg_ros" type="plane_seg_rospy.py" output="screen">
+    <remap from="/plane_seg_n2/pose" to="/state_estimator/pose_in_odom"/>
+  ..
+  </node>
+
+
+</launch>
